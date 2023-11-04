@@ -4,6 +4,8 @@ import dotenv
 from datetime import datetime
 
 def shorten(full_link):
+    dotenv.load_dotenv()
+
     API_KEY = (os.getenv('API_KEY'))
     base_url = 'https://cutt.ly/api/api.php'
 
@@ -24,5 +26,4 @@ def shorten(full_link):
 
 
 if __name__ == "__main__":
-    dotenv.load_dotenv()
     shorten('google.com')
